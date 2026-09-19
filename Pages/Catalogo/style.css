@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Reset básico de estilos */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Variáveis de cores para tema claro */
+:root{
+    --background-color: #FFFFFF;
+    --background-secondary: #F2F2F2;
+    --text-color: #000000;
+    --text-secondary: #6D6D6D;
+}
+
+/* Variáveis de cores para tema escuro */
+[data-theme="dark"]{
+    --background-color: #1A1A1A;
+    --background-secondary: #333333;
+    --text-color: #FFFFFF;
+    --text-secondary: #B3B3B3;
+}
+
+/* Estilos gerais do texto da página */
+h1{
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text-color);
+}
+mark{
+    background-color: transparent;
+    font-weight: 900;
+    color: var(--text-color);
+}
+h2{
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color);
+}
+h3{
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    font-style: normal;
+    color: var(--text-color);
+}
+h4{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--text-color);
+}
+p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 350;
+    font-style: normal;
+    color: var(--text-secondary);
+}
+
+/* CABEÇALHO */
+/* Estilo do cabeçalho da página */
+header{
+    display: flex; /*Ativa o Flexbox para o cabeçalho*/
+    justify-content: flex-start; /* Mantém os elementos alinhados em uma única linha */
+    align-items: center; /* Alinha os elementos verticalmente ao centro */
+    gap: 1.5rem; /* Adiciona espaço entre os itens da direita */
+    padding: .5rem 2.5rem; /* Adiciona espaçamento interno ao cabeçalho */
+    background-color: var(--background-color); /* Define a cor de fundo do cabeçalho */
+    position: fixed; /* Mantém o cabeçalho fixo no topo da página */
+    width: 100%; /* Define a largura do cabeçalho como 100% da tela */
+    top: 0; /* Posiciona o cabeçalho no topo da página */
+    left: 0; /* Posiciona o cabeçalho à esquerda da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos da página */  
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo */
+}
+header h1{
+    margin-right: auto; /* Empurra a navegação e o botão para a direita */
+}
+/* Estilo da lista de navegação do cabeçalho */
+header ul{
+    list-style: none; /* Remove os marcadores da lista */
+    display: flex; /* Ativa o Flexbox para a lista de navegação */
+    gap: 1rem; /* Adiciona espaçamento entre os itens da lista */
+}
+/* Estilo dos links de navegação do cabeçalho */
+header ul li a{
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: var(--text-color); /* Define a cor do texto dos links */
+    font-weight: 500; /* Define a espessura da fonte dos links */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor dos links */
+}
+/* Estilo do botão de alternância de tema */
+#botao-tema{
+    background-color: transparent; /* Define o fundo do botão como transparente */
+    border: none; /* Remove a borda do botão */
+    color: var(--text-color); /* Define a cor do texto do botão */
+    font-size: 1.5rem; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    transition: color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor do botão */
+}
+
+/* RODAPÉ */
+/* Estilo do rodapé da página */
+footer{
+    padding: 2rem;  /* Adiciona espaçamento interno ao rodapé */
+    background-color: var(--background-color); /* Define a cor de fundo do rodapé */
+    color: var(--text-secondary); /* Define a cor do texto do rodapé */
+    width: 100%; /* Define a largura do rodapé como 100% da tela */
+    bottom: 0; /* Posiciona o rodapé na parte inferior da página */
+    left: 0; /* Posiciona o rodapé à esquerda da página */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor de fundo do rodapé */
+}
+footer h4{
+    margin-bottom: 2.5rem; /* Adiciona espaçamento abaixo do título do rodapé */
+}
+footer p{
+    font-weight: 350; /* Define a espessura da fonte do texto do rodapé */
+    margin-bottom: 2.5rem; /* Adiciona espaçamento abaixo do texto do rodapé */
+}
