@@ -14,8 +14,10 @@
 
             <!-- Navegação-->
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="../Catalogo/catalogo.html">Catalogo</a></li>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#produto">Descrição</a></li>
+                <li><a href="#faq">Funções</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
             </ul>
 
             <!-- Botão de tema -->
@@ -24,7 +26,7 @@
             </button>
         </header>
         <main>
-            <section class="carrossel-pagina">
+            <section class="carrossel-pagina" id="inicio">
 
                 <!-- Carrossel de imagens -->
                 <figure>
@@ -39,53 +41,148 @@
                 <h3>Possibilitando o impossível</h3>
                 <p>Trazendo uma nova forma de se conectar com o passado e experenciar o que você nunca viveu.</p>
             </section>
-            <section class="produto-pagina">
+            <section class="produto-pagina" id="produto">
 
                 <!-- Apresentação do produto -->
                 <h3>Uma forma de inovAR</h3>
                 <p>Um produto nunca visto antes, mas que nunca será esquecido. Uma forma de você se reconectar com os ancestrais. Ar do passado em conserva.</p>
 
                 <!-- Botão para ir para o catálogo -->
-                <a href="../Catalogo/catalogo.html" type="button" id="botao-catalogo" aria-label="Ir para o catálogo de produtos">
+                <a href="#catalogo" type="button" id="botao-catalogo" aria-label="Ir para o catálogo de produtos">
                     Catálogo
                 </a>
 
                 <!-- Imagem do produto -->
                 <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Imagem do produto">
             </section>
-            <section class="faq-pagina">
+            <section class="faq-pagina" id="faq">
 
                 <!-- Titulo da seção -->
                 <h2>E qual a função do ar?</h2>
 
-                <!-- Lista de modais-->
-                <ul>
-                    <li data-modal="modal1">Pureza</li>
-                    <li data-modal="modal2">Exclusividade</li>
-                    <li data-modal="modal3">Conexão</li>
-                </ul>
+                <!-- Lista de infos-->
+                 <div id="infos" class="itens">
+                    <div id="info1" class="faqitem">
+                        <h4>•  Pureza</h4>
+                        <p>O ar atual é carregado de poluição e microplásticos que geram cansaço. Ao respirar um ar antigo você está recebendo uma oxigenação pura, limpa e natural.</p>
+                    </div>
+                    <div id="info2" class="faqitem">
+                        <h4>•  Exclusividade</h4>
+                        <p>É um produto limitado e escasso, o que o torna um artigo de luxo. O estoque dele não pode se repor, o que torna a oferta baixa em relação à demanda.</p>
+                    </div>
+                    <div id="info3" class="faqitem">
+                        <h4>•  Conexão</h4>
+                        <p>Ao abrir o recipiente você compartilha exatamente a mesma atmosfera que oxigenou as mentes de gênios do passado, o que pode trazer inspiração em momentos necessários.</p>
+                    </div>
+                </div>
             </section>
 
-            <!-- Modais -->
-            <div id="modal1" class="modal">
-                <div class="modal-content">
-                    <span class="fechar-modal">&times;</span>
-                    <h4>Pureza</h4>
-                    <p>O ar atual é carregado de poluição e microplásticos que geram cansaço. Ao respirar um ar antigo você está recebendo uma oxigenação pura, limpa e natural.</p>
+            <!-- Catálogo -->
+             <section class="catalogo-pagina" id="catalogo">
+                <h2>Catálogo</h2>
+                <p>Conheça os produtos que temos disponíveis para você.</p>
+                <div class="catalogo-carrossel-wrapper">
+                    <button type="button" class="controle-carrossel anterior" data-carousel-target="produtos-carrossel" aria-label="Produto anterior">&#10094;</button>
+                    <div class="produtos-carrossel" id="produtos-carrossel">
+                        <button type="button" class="produto-card" data-modal="produto-modal-1" aria-label="Ver detalhes do Produto 1">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 1">
+                            <h3>Produto 1</h3>
+                            <p>Descrição do Produto 1.</p>
+                        </button>
+                        <button type="button" class="produto-card" data-modal="produto-modal-2" aria-label="Ver detalhes do Produto 2">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 2">
+                            <h3>Produto 2</h3>
+                            <p>Descrição do Produto 2.</p>
+                        </button>
+                        <button type="button" class="produto-card" data-modal="produto-modal-3" aria-label="Ver detalhes do Produto 3">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 3">
+                            <h3>Produto 3</h3>
+                            <p>Descrição do Produto 3.</p>
+                        </button>
+                        <button type="button" class="produto-card" data-modal="produto-modal-4" aria-label="Ver detalhes do Produto 4">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 4">
+                            <h3>Produto 4</h3>
+                            <p>Descrição do Produto 4.</p>
+                        </button>
+                        <button type="button" class="produto-card" data-modal="produto-modal-5" aria-label="Ver detalhes do Produto 5">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 5">
+                            <h3>Produto 5</h3>
+                            <p>Descrição do Produto 5.</p>
+                        </button>
+                        <button type="button" class="produto-card" data-modal="produto-modal-6" aria-label="Ver detalhes do Produto 6">
+                            <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 6">
+                            <h3>Produto 6</h3>
+                            <p>Descrição do Produto 6.</p>
+                        </button>
+                    </div>
+                    <button type="button" class="controle-carrossel proximo" data-carousel-target="produtos-carrossel" aria-label="Próximo produto">&#10095;</button>
+                </div>
+             </section>
+
+            <div id="produto-modal-1" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-1">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 1">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-1">Produto 1</h4>
+                        <p>Descrição detalhada do Produto 1. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
                 </div>
             </div>
-            <div id="modal2" class="modal">
-                <div class="modal-content">
-                    <span class="fechar-modal">&times;</span>
-                    <h4>Exclusividade</h4>
-                    <p>É um produto limitado e escasso, o que o torna um artigo de luxo. O estoque dele não pode se repor, o que torna a oferta baixa em relação à demanda.</p>
+            <div id="produto-modal-2" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-2">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 2">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-2">Produto 2</h4>
+                        <p>Descrição detalhada do Produto 2. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
                 </div>
             </div>
-            <div id="modal3" class="modal">
-                <div class="modal-content">
-                    <span class="fechar-modal">&times;</span>
-                    <h4>Conexão</h4>
-                    <p>Ao abrir o recipiente você compartilha exatamente a mesma atmosfera que oxigenou as mentes de gênios do passado, o que pode trazer inspiração em momentos necessários.</p>
+            <div id="produto-modal-3" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-3">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 3">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-3">Produto 3</h4>
+                        <p>Descrição detalhada do Produto 3. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
+                </div>
+            </div>
+            <div id="produto-modal-4" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-4">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 4">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-4">Produto 4</h4>
+                        <p>Descrição detalhada do Produto 4. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
+                </div>
+            </div>
+            <div id="produto-modal-5" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-5">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 5">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-5">Produto 5</h4>
+                        <p>Descrição detalhada do Produto 5. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
+                </div>
+            </div>
+            <div id="produto-modal-6" class="modal" role="dialog" aria-modal="true" aria-labelledby="produto-titulo-6">
+                <div class="modal-content modal-produto">
+                    <button type="button" class="fechar-modal" aria-label="Fechar detalhes">&times;</button>
+                    <img src="https://media.istockphoto.com/id/1324356458/vector/picture-icon-photo-frame-symbol-landscape-sign-photograph-gallery-logo-web-interface-and.jpg?s=612x612&w=0&k=20&c=ZmXO4mSgNDPzDRX-F8OKCfmMqqHpqMV6jiNi00Ye7rE=" alt="Produto 6">
+                    <div class="modal-produto-info">
+                        <h4 id="produto-titulo-6">Produto 6</h4>
+                        <p>Descrição detalhada do Produto 6. Conheça todos os detalhes desta experiência de conexão com o passado.</p>
+                        <button type="button" class="botao-produto">Disponível em breve</button>
+                    </div>
                 </div>
             </div>
         </main>

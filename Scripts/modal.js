@@ -1,5 +1,5 @@
 // Seleciona todos os itens da lista que têm o atributo data-modal
-const itensLista = document.querySelectorAll('li[data-modal]');
+const itensLista = document.querySelectorAll('[data-modal]');
 const botoesFechar = document.querySelectorAll('.fechar-modal');
 
 // Abrir o modal correspondente
@@ -25,5 +25,13 @@ botoesFechar.forEach(botao => {
 window.addEventListener('click', (event) => {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = "none";
+    }
+});
+
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.style.display = "none";
+        });
     }
 });
