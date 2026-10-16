@@ -5,10 +5,10 @@ const botoesFechar = document.querySelectorAll('.fechar-modal');
 // Abrir o modal correspondente
 itensLista.forEach(item => {
     item.addEventListener('click', () => {
-        const modalId = item.getAttribute('data-modal');
+        const modalId = item.getAttribute('data-modal'); // Pega o ID
         const modal = document.getElementById(modalId);
         if (modal) {
-            modal.style.display = "flex";
+            modal.style.display = "flex"; // Revela o modal
         }
     });
 });
