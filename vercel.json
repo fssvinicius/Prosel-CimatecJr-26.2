@@ -1,0 +1,5 @@
+{
+    "redirects": [
+        { "source": "/", "destination": "/Page/Home/index.html", "permanent": false }
+    ]
+}
